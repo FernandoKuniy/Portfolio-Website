@@ -8,9 +8,9 @@ export default function Contact() {
     set("sending");
     const fd = new FormData(e.currentTarget);
     const payload = {
-      name: fd.get("name") as string,
-      email: fd.get("email") as string,
-      message: fd.get("message") as string,
+      name: (fd.get("name") as string) || "",
+      email: (fd.get("email") as string) || "",
+      message: (fd.get("message") as string) || "",
     };
     console.log("Sending payload:", payload);
     const res = await fetch("/api/contact", {
@@ -23,6 +23,7 @@ export default function Contact() {
     } else {
       const errorData = await res.json();
       console.log("Error response:", errorData);
+      console.log("Field errors:", errorData.error?.fieldErrors);
       set("err");
     }
   }

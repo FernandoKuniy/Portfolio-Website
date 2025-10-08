@@ -5,7 +5,7 @@ import type { NextRequest } from "next/server";
 const schema = z.object({
   name: z.string().min(1).max(80),
   email: z.string().email().max(120),
-  message: z.string().min(10).max(5000),
+  message: z.string().min(1).max(5000),
 });
 const resend = new Resend(process.env.RESEND_API_KEY);
 
