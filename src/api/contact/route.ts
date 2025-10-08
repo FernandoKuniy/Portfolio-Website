@@ -26,7 +26,7 @@ function limited(key: string): boolean {
   return false;
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
   const ip =
     req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
     "0.0.0.0";
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: "Portfolio <noreply@your-domain.com>",
+      from: "Portfolio <onboarding@resend.dev>",
       to: process.env.CONTACT_TO_EMAIL,
       replyTo: email,
       subject: `New message from ${name}`,
