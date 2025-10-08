@@ -1,6 +1,5 @@
 import { Resend } from "resend";
 import { z } from "zod";
-import type { NextRequest } from "next/server";
 
 const schema = z.object({
   name: z.string().min(1).max(80),
@@ -63,6 +62,6 @@ export async function POST(req: Request) {
     });
     return Response.json({ ok: true });
   } catch (err) {
-    return Response.json({ error: "Email send failed" }, { status: 502 });
+    return Response.json({ error: "Email send failed: ", err }, { status: 502 });
   }
 }
