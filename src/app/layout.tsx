@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "../components/header";
 import Footer from "../components/footer";
+import Sidebar from "../components/sidebar"
+import ThemeToggle from "../components/theme-toggle"
 import "../styles/prose.css";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -45,15 +46,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-        />
-        <Header />
-        <main id="main">{children}</main>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <div className="fixed top-4 right-4 z-50">
+        <ThemeToggle />
+      </div>
+        {/* Mobile intro (sidebar content inline) */}
+        <div className="lg:hidden mx-auto max-w-6xl px-6 py-8">
+          <Sidebar variant="mobile" />
+        </div>
+
+        {/* Desktop two-column */}
+        <div className="mx-auto max-w-6xl px-6 lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-40">
+          <aside className="hidden lg:block sticky top-24 h-fit">
+            <Sidebar variant="desktop" />
+          </aside>
+          <main id="main">{children}</main>
+        </div>
         <Footer />
-        <Analytics />
       </body>
     </html>
   );
