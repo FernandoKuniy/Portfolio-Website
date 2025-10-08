@@ -51,7 +51,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         <Header />
-        {children}
+        <main id="main">{children}</main>
         <Footer />
         <Analytics />
       </body>
