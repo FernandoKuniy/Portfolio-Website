@@ -7,16 +7,24 @@ export default function Contact() {
     e.preventDefault();
     set("sending");
     const fd = new FormData(e.currentTarget);
+    const payload = {
+      name: fd.get("name") as string,
+      email: fd.get("email") as string,
+      message: fd.get("message") as string,
+    };
+    console.log("Sending payload:", payload);
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: fd.get("name"),
-        email: fd.get("email"),
-        message: fd.get("message"),
-      }),
+      body: JSON.stringify(payload),
     });
-    set(res.ok ? "ok" : "err");
+    if (res.ok) {
+      set("ok");
+    } else {
+      const errorData = await res.json();
+      console.log("Error response:", errorData);
+      set("err");
+    }
   }
   return (
     <main className="mx-auto max-w-lg p-6 space-y-4">

@@ -43,6 +43,7 @@ export async function POST(req: Request) {
 
   const parsed = schema.safeParse(payload);
   if (!parsed.success) {
+    console.log("Validation error:", parsed.error.flatten());
     return Response.json({ error: parsed.error.flatten() }, { status: 400 });
   }
 
