@@ -45,7 +45,7 @@ export default function ConfirmationPopup({ isOpen, onClose }: ConfirmationPopup
             Message Sent!
           </h3>
           <p className="text-sm text-[var(--muted)]">
-            Thank you for reaching out. I'll get back to you soon.
+            Thank you for reaching out. I&apos;ll get back to you soon.
           </p>
         </div>
       </div>

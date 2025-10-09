@@ -1,6 +1,5 @@
-import type { NextRequest } from "next/server";
 
-export function GET(_req: NextRequest) {
+export function GET() {
   const host = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
   const body = [
     "User-agent: *",

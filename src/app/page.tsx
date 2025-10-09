@@ -17,13 +17,13 @@ export default function Home() {
       <section id="about" className="scroll-mt-24 pt-8 lg:pt-24 pb-12">
         <div className="space-y-4">
           <p className="text-sm leading-6 text-[var(--muted)] sm:text-base sm:leading-7">
-            I'm a developer passionate about building products that bridge intelligent systems with intuitive design. 
+            I&apos;m a developer passionate about building products that bridge intelligent systems with intuitive design. 
             My focus lies at the intersection of software engineering and data — creating solutions that not only look refined 
             but also deliver measurable impact through automation, analytics, and AI.
           </p>
 
           <p className="text-sm leading-6 text-[var(--muted)] sm:text-base sm:leading-7">
-            Currently, I'm the <span className="font-medium text-[var(--foreground)]">Lead Developer and Co-founder at SeekLab</span>, where I built and scaled 
+            Currently, I&apos;m the <span className="font-medium text-[var(--foreground)]">Lead Developer and Co-founder at SeekLab</span>, where I built and scaled 
             an AI-driven recruiting platform connecting employers with referral partners to accelerate hiring. I lead development 
             across our full-stack platform (Supabase, GCP, Angular, Node.js) and design automations that streamline recruiter and client 
             operations, reducing manual work and improving efficiency across the business.
@@ -37,7 +37,7 @@ export default function Home() {
           </p>
 
           <p className="text-sm leading-6 text-[var(--muted)] sm:text-base sm:leading-7">
-            When I'm not coding or refining workflows, you'll probably find me lifting weights, skiing, hiking through new trails, 
+            When I&apos;m not coding or refining workflows, you&apos;ll probably find me lifting weights, skiing, hiking through new trails, 
             or starting a new art project with my girlfriend. I enjoy the balance these activities bring — staying active, creative, and grounded 
             outside of building digital products.
           </p>
