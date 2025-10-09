@@ -21,11 +21,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Fernando Kuniy — Portfolio",
-  description: "Software + data projects. Next.js, Tailwind, MDX.",
+  description: "I build data-driven, user-focused applications with precision and purpose.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   openGraph: {
     title: "Fernando Kuniy — Portfolio",
-    description: "Software + data projects. Next.js, Tailwind, MDX.",
+    description: "I build data-driven, user-focused applications with precision and purpose.",
     url: "/",
     siteName: "Fernando Kuniy",
     images: ["/og-image.png"],
