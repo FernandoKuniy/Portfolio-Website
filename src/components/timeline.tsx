@@ -22,11 +22,11 @@ export default function Timeline({ items }: { items: ExperienceItem[] }) {
         />
         
         {items.map((it, index) => (
-          <li key={`${it.company}-${it.start}`} className="group relative mb-10 ml-8">
+          <li key={`${it.company}-${it.start}`} className="group relative mb-8 sm:mb-10 ml-6 sm:ml-8">
             {/* Timeline node with gradient ring */}
-            <div className="absolute -left-6 mt-1 flex h-4 w-4 items-center justify-center">
+            <div className="absolute -left-5 sm:-left-6 mt-1 flex h-3 w-3 sm:h-4 sm:w-4 items-center justify-center">
               <div 
-                className="h-3 w-3 rounded-full border-2 transition-all duration-300 group-hover:scale-110"
+                className="h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full border-2 transition-all duration-300 group-hover:scale-110"
                 style={{
                   borderColor: 'var(--accent-500)',
                   backgroundColor: 'var(--bg-elev)',
@@ -36,7 +36,7 @@ export default function Timeline({ items }: { items: ExperienceItem[] }) {
               />
             </div>
             
-            <div className="flex flex-wrap items-baseline gap-x-2">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-1 sm:gap-x-2">
               <div className="text-xs text-[var(--muted)] font-mono tracking-wide">
                 {it.start} — {it.end}
               </div>
@@ -55,9 +55,9 @@ export default function Timeline({ items }: { items: ExperienceItem[] }) {
               </div>
             </div>
             
-            <ul className="mt-3 space-y-2 text-sm text-[var(--muted)] leading-relaxed">
+            <ul className="mt-3 space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-[var(--muted)] leading-relaxed">
               {it.highlights.map((h) => (
-                <li key={h} className="relative pl-4 before:absolute before:left-0 before:top-2 before:h-1 before:w-1 before:rounded-full before:bg-[var(--accent-500)]/60">
+                <li key={h} className="relative pl-3 sm:pl-4 before:absolute before:left-0 before:top-1.5 sm:before:top-2 before:h-1 before:w-1 before:rounded-full before:bg-[var(--accent-500)]/60">
                   {h}
                 </li>
               ))}
@@ -67,15 +67,15 @@ export default function Timeline({ items }: { items: ExperienceItem[] }) {
       </ol>
       
       {/* Resume button at the end of timeline */}
-      <div className="mt-8 ml-8">
+      <div className="mt-6 sm:mt-8 ml-6 sm:ml-8">
         <Link 
           href="/resume.pdf" 
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] px-4 py-2 text-sm text-[var(--accent-400)] transition-all duration-200 hover:border-[var(--accent-500)] hover:bg-[var(--accent-500)]/10 hover:text-[var(--accent-300)]"
+          className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm text-[var(--accent-400)] transition-all duration-200 hover:border-[var(--accent-500)] hover:bg-[var(--accent-500)]/10 hover:text-[var(--accent-300)]"
         >
           <svg 
-            className="h-4 w-4" 
+            className="h-3 w-3 sm:h-4 sm:w-4" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24" 

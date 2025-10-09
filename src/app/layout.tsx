@@ -52,12 +52,12 @@ export default function RootLayout({
         <Cursor />
         <Background>
           {/* Mobile intro (sidebar content inline) */}
-          <div className="lg:hidden mx-auto max-w-6xl px-6 py-8">
+          <div className="lg:hidden mx-auto max-w-6xl px-4 sm:px-6 py-6 sm:py-8">
             <Sidebar variant="mobile" />
           </div>
 
           {/* Desktop two-column */}
-          <div className="mx-auto max-w-6xl px-6 lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-40">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-40">
             <aside className="hidden lg:block sticky top-24 h-fit">
               <Sidebar variant="desktop" />
             </aside>

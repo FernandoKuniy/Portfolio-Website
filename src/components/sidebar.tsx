@@ -16,23 +16,23 @@ export default function Sidebar({ variant = "desktop" }: Props) {
     return (
       <div className="space-y-12">
         <div>
-          <h1 className="text-4xl font-bold text-[#e6e9f1] tracking-tight">Fernando Kuniy</h1>
-          <h2 className="text-xl font-medium text-[var(--accent-400)] mt-2">Full Stack Software Engineer</h2>
-          <p className="mt-4 text-[#e6e9f1] leading-relaxed text-base">
+          <h1 className="text-3xl font-bold text-[#e6e9f1] tracking-tight sm:text-4xl">Fernando Kuniy</h1>
+          <h2 className="text-lg font-medium text-[var(--accent-400)] mt-2 sm:text-xl">Full Stack Software Engineer</h2>
+          <p className="mt-4 text-[#e6e9f1] leading-relaxed text-sm sm:text-base">
               I build data-driven, user-focused applications with precision and purpose.
           </p>
         </div>
 
         {/* horizontally scrollable section pills */}
-        <nav aria-label="Sections" className="-mx-1 overflow-x-auto no-scrollbar mt-16">
-          <ul className="flex gap-3 px-1">
+        <nav aria-label="Sections" className="-mx-1 overflow-x-auto no-scrollbar mt-12 sm:mt-16">
+          <ul className="flex gap-2 sm:gap-3 px-1">
             {sections.map((s) => {
               const isActive = activeId === s.id;
               return (
                 <li key={s.id}>
                   <a
                     href={`/#${s.id}`}
-                    className={`whitespace-nowrap rounded-full border px-4 py-2 text-base transition-all duration-200 ${
+                    className={`whitespace-nowrap rounded-full border px-3 py-1.5 text-sm transition-all duration-200 sm:px-4 sm:py-2 sm:text-base ${
                       isActive
                         ? 'border-[var(--accent-500)] bg-[var(--accent-500)]/10 text-[var(--accent-400)]'
                         : 'border-[var(--border)] text-[var(--muted)] hover:border-[var(--accent-500)]/60 hover:text-[var(--accent-400)]'
@@ -47,7 +47,7 @@ export default function Sidebar({ variant = "desktop" }: Props) {
         </nav>
 
         {/* Social links with icons */}
-        <div className="flex gap-6 mt-32">
+        <div className="flex gap-4 sm:gap-6 mt-24 sm:mt-32">
           <Link 
             href="/resume.pdf" 
             target="_blank"
