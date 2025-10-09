@@ -73,7 +73,7 @@ export default function Home() {
 
       <section id="projects" aria-labelledby="proj-h" className="scroll-mt-24 py-12">
         <h2 id="proj-h" className="text-2xl font-semibold text-[#e6e9f1] md:text-3xl tracking-tight">Projects</h2>
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="mt-6 space-y-6">
           {projects.map((p) => (
             <ProjectCard key={p.title} {...p} />
           ))}

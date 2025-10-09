@@ -23,52 +23,77 @@ export default function ProjectCard({ title, summary, tech, links, image }: Proj
       
       {/* Main card */}
       <div className="relative overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-elev)] p-5 transition-all duration-300 will-change-transform group-hover:-translate-y-0.5 group-hover:glow">
-        {image ? (
-          <Image 
-            src={image} 
-            alt="" 
-            width={1200} 
-            height={630} 
-            className="mb-4 h-44 w-full rounded-lg object-cover transition-transform duration-300 group-hover:scale-105" 
-          />
-        ) : null}
-
-        <h3 className="text-base font-semibold text-[#e6e9f1] transition-colors duration-200 group-hover:text-[var(--accent-400)]">
-          {title}
-        </h3>
-
-        <p className="mt-2 line-clamp-3 text-sm text-[var(--muted)] leading-relaxed">
-          {summary}
-        </p>
-
-        <div className="mt-3 flex flex-wrap gap-2">
-          {tech.map((t) => (
-            <span 
-              key={t} 
-              className="rounded-full border border-[var(--border)]/60 bg-[var(--bg)]/50 px-2 py-0.5 text-xs text-[var(--muted)] transition-colors duration-200 hover:border-[var(--accent-500)]/60 hover:text-[var(--accent-400)]"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-4 flex items-center gap-4 text-sm">
-          {links?.demo && (
-            <a 
-              href={links.demo} 
-              className="relative text-[var(--accent-400)] transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
-            >
-              Demo
-            </a>
+        <div className="flex gap-6">
+          {/* Image section - smaller MacBook aspect ratio (16:10) */}
+          {image && (
+            <div className="flex-shrink-0">
+              <Image 
+                src={image} 
+                alt="" 
+                width={240} 
+                height={150} 
+                className="h-36 w-60 rounded-lg object-cover transition-transform duration-300 group-hover:scale-105" 
+              />
+            </div>
           )}
-          {links?.repo && (
-            <a 
-              href={links.repo} 
-              className="relative text-[var(--accent-400)] transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
-            >
-              Code
-            </a>
-          )}
+
+          {/* Content section */}
+          <div className="flex-1 min-w-0">
+            <h3 className="text-base font-semibold text-[#e6e9f1] transition-colors duration-200 group-hover:text-[var(--accent-400)]">
+              {links?.demo ? (
+                <a 
+                  href={links.demo} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
+                >
+                  {title}
+                </a>
+              ) : (
+                title
+              )}
+            </h3>
+
+            <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
+              {summary}
+            </p>
+
+            <div className="mt-3 flex flex-wrap gap-2">
+              {tech.map((t) => (
+                <span 
+                  key={t} 
+                  className="rounded-full border border-[var(--border)]/60 bg-[var(--bg)]/50 px-2 py-0.5 text-xs text-[var(--muted)] transition-colors duration-200 hover:border-[var(--accent-500)]/60 hover:text-[var(--accent-400)]"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            {(links?.demo || links?.repo) && (
+              <div className="mt-4 flex items-center gap-4 text-sm">
+                {links?.demo && (
+                  <a 
+                    href={links.demo} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative text-[var(--accent-400)] transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
+                  >
+                    Demo
+                  </a>
+                )}
+                {links?.repo && (
+                  <a 
+                    href={links.repo} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative text-[var(--accent-400)] transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
+                  >
+                    Code
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </article>

@@ -1,5 +1,40 @@
 [
-    { "company":"SeekLab Inc.","role":"Co-founder / Lead Developer","start":"2024-06","end":"Present",
-      "highlights":["Built AI resume parser and ranking","Led full-stack platform delivery"] }
-  ]
-  
+  {
+    "company": "SeekLab Inc.",
+    "role": "Co-founder / Lead Developer",
+    "start": "2024-06",
+    "end": "Present",
+    "highlights": [
+      "Built AI resume parser and candidate scoring engine",
+      "Architected full-stack platform (Supabase, GCP, Angular, Node/Express)",
+      "Reduced manual ops via SQL analytics and workflow automation",
+      "Created KPI dashboards for recruiter and client performance",
+      "Implemented QA, test automation, and Slack-linked error reporting",
+      "Led demos, onboarding, and client feedback loops"
+    ]
+  },
+  {
+    "company": "Snazz Inc.",
+    "role": "Software Engineer",
+    "start": "2023-08",
+    "end": "2024-05",
+    "highlights": [
+      "Integrated backend services and core app features",
+      "Ran UX interviews to guide feature design and retention",
+      "Led bug-fixing and testing cycles to improve stability",
+      "Streamlined workflows with cross-functional teams"
+    ]
+  },
+  {
+    "company": "Itaú Unibanco",
+    "role": "Debt Capital Markets Intern",
+    "start": "2022-06",
+    "end": "2022-08",
+    "highlights": [
+      "Automated recurring analyses and reporting in Excel",
+      "Cut deliverable turnaround times by over 50%",
+      "Produced market updates and bond analyses for client decks",
+      "Validated data accuracy across regional teams"
+    ]
+  }
+]
