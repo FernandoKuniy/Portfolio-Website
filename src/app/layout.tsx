@@ -3,13 +3,14 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "../components/footer";
 import Sidebar from "../components/sidebar"
-import ThemeToggle from "../components/theme-toggle"
+import Background from "../components/background"
 import "../styles/prose.css";
 import { Analytics } from "@vercel/analytics/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 const geistMono = Geist_Mono({
@@ -45,24 +46,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <div className="fixed top-4 right-4 z-50">
-        <ThemeToggle />
-      </div>
-        {/* Mobile intro (sidebar content inline) */}
-        <div className="lg:hidden mx-auto max-w-6xl px-6 py-8">
-          <Sidebar variant="mobile" />
-        </div>
+        <Background>
+          {/* Mobile intro (sidebar content inline) */}
+          <div className="lg:hidden mx-auto max-w-6xl px-6 py-8">
+            <Sidebar variant="mobile" />
+          </div>
 
-        {/* Desktop two-column */}
-        <div className="mx-auto max-w-6xl px-6 lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-40">
-          <aside className="hidden lg:block sticky top-24 h-fit">
-            <Sidebar variant="desktop" />
-          </aside>
-          <main id="main">{children}</main>
-        </div>
-        <Footer />
+          {/* Desktop two-column */}
+          <div className="mx-auto max-w-6xl px-6 lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-40">
+            <aside className="hidden lg:block sticky top-24 h-fit">
+              <Sidebar variant="desktop" />
+            </aside>
+            <main id="main">{children}</main>
+          </div>
+          
+          <Footer />
+        </Background>
       </body>
     </html>
   );

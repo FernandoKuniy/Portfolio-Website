@@ -15,8 +15,9 @@ export default function Sidebar({ variant = "desktop" }: Props) {
       <div className="space-y-5">
         <div>
           <h1 className="text-3xl font-semibold">Fernando Kuniy</h1>
+          <h2 className="text-xl text-slate-700 dark:text-slate-300">Full Stack Software Engineer</h2>
           <p className="mt-2 text-slate-600">
-            Software + data. Next.js, Tailwind, MDX.
+              I build data-driven, user-focused applications with precision and purpose.
           </p>
         </div>
 
@@ -38,7 +39,7 @@ export default function Sidebar({ variant = "desktop" }: Props) {
 
         <div className="flex gap-4 text-sm">
           <Link href="https://github.com/FernandoKuniy" className="underline">GitHub</Link>
-          <Link href="https://www.linkedin.com/in/..." className="underline">LinkedIn</Link>
+          <Link href="https://www.linkedin.com/in/fernando-kuniy/" className="underline">LinkedIn</Link>
         </div>
       </div>
     );
@@ -48,7 +49,8 @@ export default function Sidebar({ variant = "desktop" }: Props) {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-semibold">Fernando Kuniy</h1>
-        <p className="mt-2 text-slate-600">Software + data. Next.js, Tailwind, MDX.</p>
+        <h2 className="text-xl text-slate-700 dark:text-slate-300">Full Stack Software Engineer</h2>
+        <p className="mt-2 text-slate-600">I build data-driven, user-focused applications with precision and purpose.</p>
       </div>
       <nav aria-label="Section navigation" className="flex flex-col gap-2">
         {sections.map((s) => (
@@ -63,7 +65,7 @@ export default function Sidebar({ variant = "desktop" }: Props) {
       </nav>
       <div className="flex gap-4 text-sm">
         <Link href="https://github.com/FernandoKuniy" className="underline">GitHub</Link>
-        <Link href="https://www.linkedin.com/in/..." className="underline">LinkedIn</Link>
+        <Link href="https://www.linkedin.com/in/fernando-kuniy/" className="underline">LinkedIn</Link>
       </div>
     </div>
   );

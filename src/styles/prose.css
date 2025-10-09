@@ -1,1 +1,121 @@
-.prose :where(h1,h2,h3,h4){scroll-margin-top:80px}
+/* Prose styling for dark theme */
+.prose {
+  --tw-prose-body: #c9d0e3;
+  --tw-prose-headings: #e6e9f1;
+  --tw-prose-links: var(--accent-400);
+  --tw-prose-bold: #e8ecf9;
+  --tw-prose-code: #e8ecf9;
+  --tw-prose-pre-bg: var(--bg-elev);
+  --tw-prose-pre-code: #e6e9f1;
+  --tw-prose-quotes: var(--muted);
+  --tw-prose-quote-borders: var(--border);
+  --tw-prose-captions: var(--muted);
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+}
+
+.prose :where(h1,h2,h3,h4) {
+  scroll-margin-top: 80px;
+  color: var(--tw-prose-headings);
+}
+
+.prose :where(a) {
+  color: var(--tw-prose-links);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.prose :where(a:hover) {
+  color: var(--accent-300);
+}
+
+.prose :where(a::before) {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-400);
+  transition: width 0.3s ease;
+}
+
+.prose :where(a:hover::before) {
+  width: 100%;
+}
+
+.prose :where(code) {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 0.375rem;
+  padding: 0.125rem 0.25rem;
+  font-size: 0.875em;
+  color: var(--tw-prose-code);
+}
+
+.prose :where(pre) {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+  box-shadow: 0 0 0 1px var(--border), 0 0 24px 0 var(--accent-700)/.1;
+}
+
+.prose :where(pre code) {
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.prose :where(blockquote) {
+  border-left: 4px solid var(--accent-500);
+  background: var(--bg-elev);
+  padding: 1rem 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin: 1.5rem 0;
+}
+
+.prose :where(blockquote p) {
+  color: var(--tw-prose-quotes);
+  margin: 0;
+}
+
+/* Callout styles */
+.prose :where(.callout) {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.prose :where(.callout::before) {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent-500);
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+.prose :where(.callout-info) {
+  border-color: var(--accent-500);
+}
+
+.prose :where(.callout-info::before) {
+  background: var(--accent-500);
+}
+
+.prose :where(.callout-warning) {
+  border-color: #f59e0b;
+}
+
+.prose :where(.callout-warning::before) {
+  background: #f59e0b;
+}
