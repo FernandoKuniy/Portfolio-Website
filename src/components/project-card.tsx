@@ -39,7 +39,7 @@ export default function ProjectCard({ title, summary, tech, links, image }: Proj
 
           {/* Content section */}
           <div className="flex-1 min-w-0">
-            <h3 className="text-sm sm:text-base font-semibold text-[#e6e9f1] transition-colors duration-200 group-hover:text-[var(--accent-400)]">
+            <h3 className="text-sm sm:text-base font-semibold text-[var(--foreground)] transition-colors duration-200 group-hover:text-[var(--accent-500)]">
               {links?.demo ? (
                 <a 
                   href={links.demo} 
@@ -54,7 +54,7 @@ export default function ProjectCard({ title, summary, tech, links, image }: Proj
               )}
             </h3>
 
-            <p className="mt-2 text-xs sm:text-sm text-[var(--muted)] leading-relaxed">
+            <p className="mt-2 text-sm sm:text-base text-[var(--muted)] leading-relaxed">
               {summary}
             </p>
 
@@ -62,7 +62,7 @@ export default function ProjectCard({ title, summary, tech, links, image }: Proj
               {tech.map((t) => (
                 <span 
                   key={t} 
-                  className="rounded-full border border-[var(--border)]/60 bg-[var(--bg)]/50 px-1.5 py-0.5 text-xs text-[var(--muted)] transition-colors duration-200 hover:border-[var(--accent-500)]/60 hover:text-[var(--accent-400)] sm:px-2"
+                  className="rounded-full border border-[var(--border)]/60 bg-[var(--bg)]/50 px-1.5 py-0.5 text-xs text-[var(--muted)] transition-colors duration-200 hover:border-[var(--accent-500)]/60 hover:text-[var(--accent-500)] sm:px-2"
                 >
                   {t}
                 </span>
@@ -70,7 +70,7 @@ export default function ProjectCard({ title, summary, tech, links, image }: Proj
             </div>
 
             {(links?.demo || links?.repo) && (
-              <div className="mt-4 flex items-center gap-3 sm:gap-4 text-xs sm:text-sm">
+              <div className="mt-4 flex items-center gap-3 sm:gap-4 text-sm">
                 {links?.demo && (
                   <a 
                     href={links.demo} 

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark theme color system */
+  /* Dark theme color system (default) */
   --bg: #0b0e13;
   --bg-elev: #0f131a;
   --muted: #8a93a6;
@@ -20,6 +20,29 @@
   /* Legacy support */
   --background: var(--bg);
   --foreground: #e6e9f1;
+}
+
+/* Light theme */
+:root:not(.dark) {
+  /* Light theme color system */
+  --bg: #ffffff;
+  --bg-elev: #f8fafc;
+  --muted: #475569;
+  --border: #cbd5e1;
+  --ring: #6366f1;
+  
+  /* Light theme accent palette - warm purple to blue gradient */
+  --accent-50: #f0f4ff;
+  --accent-200: #c7d2fe;
+  --accent-400: #6366f1;
+  --accent-500: #4f46e5;
+  --accent-600: #4338ca;
+  --accent-700: #3730a3;
+  --accent-800: #312e81;
+  
+  /* Legacy support */
+  --background: var(--bg);
+  --foreground: #0f172a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,7 +93,7 @@
 
 body {
   background: var(--bg);
-  color: #e6e9f1;
+  color: var(--foreground);
   font-feature-settings: "rlig" 1, "calt" 1;
 }
 
@@ -137,10 +160,17 @@ html {
 /* Grid pattern utility */
 .grid-pattern {
   background-image: 
-    linear-gradient(#ffffff08 1px, transparent 1px),
-    linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
   mask-image: radial-gradient(ellipse at center, black, transparent 70%);
+}
+
+/* Light theme grid pattern */
+:root:not(.dark) .grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
 }
 
 /* Glow effect utility */

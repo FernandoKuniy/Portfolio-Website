@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "../components/footer";
 import Sidebar from "../components/sidebar"
 import Background from "../components/background"
 import Cursor from "../components/cursor"
+import ThemeToggle from "../components/theme-toggle"
 import "../styles/prose.css";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -50,6 +50,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Cursor />
+        <ThemeToggle />
         <Background>
           {/* Mobile intro (sidebar content inline) */}
           <div className="lg:hidden mx-auto max-w-6xl px-4 sm:px-6 py-6 sm:py-8">
@@ -63,8 +64,6 @@ export default function RootLayout({
             </aside>
             <main id="main">{children}</main>
           </div>
-          
-          <Footer />
         </Background>
       </body>
     </html>

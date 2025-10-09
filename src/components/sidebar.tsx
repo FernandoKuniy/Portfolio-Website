@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
+import { useState } from "react";
 import useScrollSpy from "@/components/scroll-spy";
+import ContactPopup from "@/components/contact-popup";
+import ConfirmationPopup from "@/components/confirmation-popup";
 
 const sections = [
   { id: "about", label: "About" },
@@ -12,13 +15,20 @@ type Props = { variant?: "mobile" | "desktop" };
 
 export default function Sidebar({ variant = "desktop" }: Props) {
   const activeId = useScrollSpy(sections.map(s => s.id));
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
+
+  const handleContactSuccess = () => {
+    setIsContactOpen(false);
+    setIsConfirmationOpen(true);
+  };
   if (variant === "mobile") {
     return (
       <div className="space-y-12">
         <div>
-          <h1 className="text-3xl font-bold text-[#e6e9f1] tracking-tight sm:text-4xl">Fernando Kuniy</h1>
-          <h2 className="text-lg font-medium text-[var(--accent-400)] mt-2 sm:text-xl">Full Stack Software Engineer</h2>
-          <p className="mt-4 text-[#e6e9f1] leading-relaxed text-sm sm:text-base">
+          <h1 className="text-3xl font-bold text-[var(--foreground)] tracking-tight sm:text-4xl">Fernando Kuniy</h1>
+          <h2 className="text-lg font-medium text-[var(--accent-500)] mt-2 sm:text-xl">Full Stack Software Engineer</h2>
+          <p className="mt-4 text-[var(--foreground)] leading-relaxed text-sm sm:text-base">
               I build data-driven, user-focused applications with precision and purpose.
           </p>
         </div>
@@ -48,6 +58,15 @@ export default function Sidebar({ variant = "desktop" }: Props) {
 
         {/* Social links with icons */}
         <div className="flex gap-4 sm:gap-6 mt-24 sm:mt-32">
+          <button
+            onClick={() => setIsContactOpen(true)}
+            className="text-[var(--muted)] hover:text-[var(--accent-400)] transition-all duration-200 hover:scale-110 cursor-pointer"
+            aria-label="Contact me"
+          >
+            <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </button>
           <Link 
             href="/resume.pdf" 
             target="_blank"
@@ -82,6 +101,12 @@ export default function Sidebar({ variant = "desktop" }: Props) {
             </svg>
           </Link>
         </div>
+        
+        {/* Contact Popup */}
+        <ContactPopup isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} onSuccess={handleContactSuccess} />
+        
+        {/* Confirmation Popup */}
+        <ConfirmationPopup isOpen={isConfirmationOpen} onClose={() => setIsConfirmationOpen(false)} />
       </div>
     );
   }
@@ -89,9 +114,9 @@ export default function Sidebar({ variant = "desktop" }: Props) {
   return (
     <div className="space-y-16">
       <div>
-        <h1 className="text-4xl font-bold text-[#e6e9f1] tracking-tight">Fernando Kuniy</h1>
-        <h2 className="text-xl font-medium text-[var(--accent-400)] mt-2">Full Stack Software Engineer</h2>
-        <p className="mt-4 text-[#e6e9f1] leading-relaxed text-base">I build data-driven, user-focused applications with precision and purpose.</p>
+        <h1 className="text-4xl font-bold text-[var(--foreground)] tracking-tight">Fernando Kuniy</h1>
+        <h2 className="text-xl font-medium text-[var(--accent-500)] mt-2">Full Stack Software Engineer</h2>
+        <p className="mt-4 text-[var(--foreground)] leading-relaxed text-base">I build data-driven, user-focused applications with precision and purpose.</p>
       </div>
       
       <nav aria-label="Section navigation" className="flex flex-col gap-3 mt-20">
@@ -121,6 +146,15 @@ export default function Sidebar({ variant = "desktop" }: Props) {
       
       {/* Social links with icons */}
       <div className="flex gap-6 mt-40">
+        <button
+          onClick={() => setIsContactOpen(true)}
+          className="text-[var(--muted)] hover:text-[var(--accent-400)] transition-all duration-200 hover:scale-110 cursor-pointer"
+          aria-label="Contact me"
+        >
+          <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </button>
         <Link 
           href="/resume.pdf" 
           target="_blank"
@@ -155,6 +189,12 @@ export default function Sidebar({ variant = "desktop" }: Props) {
           </svg>
         </Link>
       </div>
+      
+      {/* Contact Popup */}
+      <ContactPopup isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} onSuccess={handleContactSuccess} />
+      
+      {/* Confirmation Popup */}
+      <ConfirmationPopup isOpen={isConfirmationOpen} onClose={() => setIsConfirmationOpen(false)} />
     </div>
   );
 }

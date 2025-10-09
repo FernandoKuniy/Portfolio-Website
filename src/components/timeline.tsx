@@ -37,25 +37,25 @@ export default function Timeline({ items }: { items: ExperienceItem[] }) {
             </div>
             
             <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-baseline gap-1 sm:gap-x-2">
-              <div className="text-xs text-[var(--muted)] font-mono tracking-wide">
+              <div className="text-sm text-[var(--muted)] font-mono tracking-wide">
                 {it.start} — {it.end}
               </div>
-              <div className="text-sm font-medium text-[#e6e9f1]">
+              <div className="text-base font-medium text-[var(--foreground)]">
                 {it.role} ·{" "}
                 {it.url ? (
                   <a 
                     href={it.url} 
-                    className="relative text-[var(--accent-400)] transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
+                    className="relative text-[var(--accent-500)] transition-all duration-300 hover:text-[var(--accent-400)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-500)] before:transition-all before:duration-300 hover:before:w-full"
                   >
                     {it.company}
                   </a>
                 ) : (
-                  <span className="text-[var(--accent-400)]">{it.company}</span>
+                  <span className="text-[var(--accent-500)]">{it.company}</span>
                 )}
               </div>
             </div>
             
-            <ul className="mt-3 space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-[var(--muted)] leading-relaxed">
+            <ul className="mt-3 space-y-1.5 sm:space-y-2 text-sm sm:text-base text-[var(--muted)] leading-relaxed">
               {it.highlights.map((h) => (
                 <li key={h} className="relative pl-3 sm:pl-4 before:absolute before:left-0 before:top-1.5 sm:before:top-2 before:h-1 before:w-1 before:rounded-full before:bg-[var(--accent-500)]/60">
                   {h}

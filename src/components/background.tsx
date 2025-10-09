@@ -3,11 +3,19 @@
 export default function Background({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative min-h-screen">
-      {/* Radial gradient overlay */}
+      {/* Radial gradient overlay - different for light/dark themes */}
       <div 
-        className="pointer-events-none absolute inset-0 opacity-40"
+        className="pointer-events-none absolute inset-0 opacity-40 dark:opacity-40 opacity-20"
         style={{
           background: 'radial-gradient(circle at 20% -20%, var(--accent-800)/.35, transparent 60%)'
+        }}
+      />
+      
+      {/* Light theme gradient overlay */}
+      <div 
+        className="pointer-events-none absolute inset-0 opacity-20 dark:opacity-0"
+        style={{
+          background: 'radial-gradient(circle at 80% 20%, var(--accent-200)/.3, transparent 60%), radial-gradient(circle at 20% 80%, var(--accent-50)/.4, transparent 50%)'
         }}
       />
       
