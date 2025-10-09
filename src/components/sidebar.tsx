@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useScrollSpy } from "@/hooks/useScrollSpy";
+import useScrollSpy from "@/components/scroll-spy";
 
 const sections = [
   { id: "about", label: "About" },
@@ -49,12 +49,16 @@ export default function Sidebar({ variant = "desktop" }: Props) {
         <div className="flex gap-4 text-sm">
           <Link 
             href="https://github.com/FernandoKuniy" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative text-[var(--accent-400)] transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
           >
             GitHub
           </Link>
           <Link 
             href="https://www.linkedin.com/in/fernando-kuniy/" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative text-[var(--accent-400)] transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
           >
             LinkedIn
@@ -100,12 +104,16 @@ export default function Sidebar({ variant = "desktop" }: Props) {
       <div className="flex gap-4 text-sm">
         <Link 
           href="https://github.com/FernandoKuniy" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative text-[var(--accent-400)] transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
         >
           GitHub
         </Link>
         <Link 
           href="https://www.linkedin.com/in/fernando-kuniy/" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="relative text-[var(--accent-400)] transition-all duration-300 hover:text-[var(--accent-300)] before:absolute before:bottom-0 before:left-0 before:h-px before:w-0 before:bg-[var(--accent-400)] before:transition-all before:duration-300 hover:before:w-full"
         >
           LinkedIn

@@ -19,9 +19,9 @@ export default function Timeline({ items }: { items: ExperienceItem[] }) {
       />
       
       {items.map((it, index) => (
-        <li key={`${it.company}-${it.start}`} className="group relative mb-10 ml-6">
+        <li key={`${it.company}-${it.start}`} className="group relative mb-10 ml-8">
           {/* Timeline node with gradient ring */}
-          <div className="absolute -left-2 mt-1 flex h-4 w-4 items-center justify-center">
+          <div className="absolute -left-6 mt-1 flex h-4 w-4 items-center justify-center">
             <div 
               className="h-3 w-3 rounded-full border-2 transition-all duration-300 group-hover:scale-110"
               style={{
