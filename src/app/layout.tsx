@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "../components/footer";
 import Sidebar from "../components/sidebar"
 import Background from "../components/background"
+import Cursor from "../components/cursor"
 import "../styles/prose.css";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Cursor />
         <Background>
           {/* Mobile intro (sidebar content inline) */}
           <div className="lg:hidden mx-auto max-w-6xl px-6 py-8">

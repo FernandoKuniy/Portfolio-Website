@@ -45,12 +45,12 @@ export default function Home() {
       </section>
 
       {/* Section divider */}
-      <div className="relative my-12">
+      <div className="relative my-16">
         <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-[var(--border)]/60"></div>
+          <div className="w-full border-t border-[var(--border)]/40"></div>
         </div>
         <div className="relative flex justify-center">
-          <div className="h-px w-16 bg-gradient-to-r from-transparent via-[var(--accent-500)] to-transparent"></div>
+          <div className="h-px w-3/4 bg-gradient-to-r from-transparent via-[var(--accent-500)] to-transparent"></div>
         </div>
       </div>
 
@@ -62,12 +62,12 @@ export default function Home() {
       </section>
 
       {/* Section divider */}
-      <div className="relative my-12">
+      <div className="relative my-16">
         <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-[var(--border)]/60"></div>
+          <div className="w-full border-t border-[var(--border)]/40"></div>
         </div>
         <div className="relative flex justify-center">
-          <div className="h-px w-16 bg-gradient-to-r from-transparent via-[var(--accent-500)] to-transparent"></div>
+          <div className="h-px w-3/4 bg-gradient-to-r from-transparent via-[var(--accent-500)] to-transparent"></div>
         </div>
       </div>
 
