@@ -74,7 +74,7 @@ export default function Timeline({ items }: { items: ExperienceItem[] }) {
       {/* Resume button at the end of timeline */}
       <div className="mt-6 sm:mt-8 ml-6 sm:ml-8">
         <Link 
-          href="/resume.pdf" 
+          href="/resume1.pdf" 
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-elev)] px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm text-[var(--accent-400)] transition-all duration-200 hover:border-[var(--accent-500)] hover:bg-[var(--accent-500)]/10 hover:text-[var(--accent-300)]"

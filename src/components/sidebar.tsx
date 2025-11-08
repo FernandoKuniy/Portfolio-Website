@@ -68,7 +68,7 @@ export default function Sidebar({ variant = "desktop" }: Props) {
             </svg>
           </button>
           <Link 
-            href="/resume.pdf" 
+            href="/resume1.pdf" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--muted)] hover:text-[var(--accent-400)] transition-all duration-200 hover:scale-110"
@@ -156,7 +156,7 @@ export default function Sidebar({ variant = "desktop" }: Props) {
           </svg>
         </button>
         <Link 
-          href="/resume.pdf" 
+          href="/resume1.pdf" 
           target="_blank"
           rel="noopener noreferrer"
           className="text-[var(--muted)] hover:text-[var(--accent-400)] transition-all duration-200 hover:scale-110"
