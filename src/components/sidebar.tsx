@@ -27,7 +27,7 @@ export default function Sidebar({ variant = "desktop" }: Props) {
       <div className="space-y-12">
         <div>
           <h1 className="text-3xl font-bold text-[var(--foreground)] tracking-tight sm:text-4xl">Fernando Kuniy</h1>
-          <h2 className="text-lg font-medium text-[var(--accent-500)] mt-2 sm:text-xl">Full Stack Software Engineer</h2>
+          <h2 className="text-lg font-medium text-[var(--accent-500)] mt-2 sm:text-xl">Founding Engineer / Full Stack Software Engineer</h2>
           <p className="mt-4 text-[var(--foreground)] leading-relaxed text-sm sm:text-base">
               I build data-driven, user-focused applications with precision and purpose.
           </p>
@@ -68,7 +68,7 @@ export default function Sidebar({ variant = "desktop" }: Props) {
             </svg>
           </button>
           <Link 
-            href="/resume1.pdf" 
+            href="/FernandoSKuniy-RESUME.pdf" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--muted)] hover:text-[var(--accent-400)] transition-all duration-200 hover:scale-110"
@@ -115,7 +115,7 @@ export default function Sidebar({ variant = "desktop" }: Props) {
     <div className="space-y-16">
       <div>
         <h1 className="text-4xl font-bold text-[var(--foreground)] tracking-tight">Fernando Kuniy</h1>
-        <h2 className="text-xl font-medium text-[var(--accent-500)] mt-2">Full Stack Software Engineer</h2>
+        <h2 className="text-xl font-medium text-[var(--accent-500)] mt-2"> Founding Engineer / Full Stack Software Engineer</h2>
         <p className="mt-4 text-[var(--foreground)] leading-relaxed text-base">I build data-driven, user-focused applications with precision and purpose.</p>
       </div>
       
@@ -156,7 +156,7 @@ export default function Sidebar({ variant = "desktop" }: Props) {
           </svg>
         </button>
         <Link 
-          href="/resume1.pdf" 
+          href="/FernandoSKuniy-RESUME.pdf" 
           target="_blank"
           rel="noopener noreferrer"
           className="text-[var(--muted)] hover:text-[var(--accent-400)] transition-all duration-200 hover:scale-110"

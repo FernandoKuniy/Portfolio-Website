@@ -23,9 +23,9 @@ export default function Home() {
           </p>
 
           <p className="text-sm leading-6 text-[var(--muted)] sm:text-base sm:leading-7">
-            Currently, I&apos;m the <span className="font-medium text-[var(--foreground)]">Lead Developer and Co-founder at SeekLab</span>, where I built and scaled 
-            an AI-driven recruiting platform connecting employers with referral partners to accelerate hiring. I lead development 
-            across our full-stack platform (Supabase, GCP, Angular, Node.js) and design automations that streamline recruiter and client 
+            Currently, I&apos;m the <span className="font-medium text-[var(--foreground)]">Founding Engineer at SeekLab</span>, where I built and scaled 
+            an AI recruiting marketplace from 0 to a 7 figure annual run rate in under a year, powering 1,000+ referral partners and 30+ enterprise clients across critical U.S. industries and startups, including YC-backed companies such as Sonia, Arist, and Readily. I lead development 
+            across our full-stack platform (Supabase/PostgreSQL, GCP, Angular, Node.js/Express) and design automations that streamline recruiter and client 
             operations, reducing manual work and improving efficiency across the business.
           </p>
 
