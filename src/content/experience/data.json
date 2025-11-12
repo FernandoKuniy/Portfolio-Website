@@ -1,13 +1,13 @@
 [
   {
     "company": "SeekLab Inc.",
-    "role": "Co-founder / Lead Developer",
+    "role": "Founding Engineer",
     "start": "2024-06",
     "end": "Present",
     "url": "https://theseeklab.com",
     "highlights": [
-      "Built AI resume parser and candidate scoring engine",
-      "Architected full-stack platform (Supabase, GCP, Angular, Node/Express)",
+      "Scaled platform from 0 to 7 figure ARR, serving 1,000+ referral partners and 30+ enterprise clients",
+      "Architected full-stack platform (Supabase/PostgreSQL, GCP, Angular, Node.js/Express)",
       "Reduced manual ops via SQL analytics and workflow automation",
       "Created KPI dashboards for recruiter and client performance",
       "Implemented QA, test automation, and Slack-linked error reporting",
@@ -20,7 +20,7 @@
     "start": "2023-08",
     "end": "2024-05",
     "highlights": [
-      "Integrated backend services and core app features",
+      "Integrated backend services and core app features in Swift and Firebase",
       "Ran UX interviews to guide feature design and retention",
       "Led bug-fixing and testing cycles to improve stability",
       "Streamlined workflows with cross-functional teams"
